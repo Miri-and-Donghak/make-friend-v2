@@ -8,22 +8,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import make.friend.components.Lobby;
+import make.friend.components.Settings;
 
-public class App extends JFrame{
-    final int WIDTH = 300, HEIGHT = 300;
-
-    App(){
-        JButton hello = new JButton("넌 뭐야");
-        add(hello);
-
-        setSize(WIDTH, HEIGHT);
-        setVisible(true);
-        setTitle("테스트");
-    }
-
+public class App{
     public static void main(String[] args) {
+        new Settings();
+        new Lobby();
+
         try {
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306",
@@ -43,6 +35,5 @@ public class App extends JFrame{
             e.printStackTrace();
         }
 
-        new App();
     }
 }
