@@ -6,7 +6,9 @@ public class Settings extends JFrame {
     final int WIDTH = 300, HEIGHT = 300;
 
     public Settings(){
-        add(Lobby.testButton());
+        ComponentManager manager = new ComponentManager();
+
+        add(manager.manegeComponent());
 
         setTitle("동학이 친구 만들기");
         setSize(WIDTH, HEIGHT);
