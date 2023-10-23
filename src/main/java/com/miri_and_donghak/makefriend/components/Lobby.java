@@ -1,4 +1,4 @@
-package make.friend.components;
+package com.miri_and_donghak.makefriend.components;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
