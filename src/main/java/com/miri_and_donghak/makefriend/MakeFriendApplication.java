@@ -1,19 +1,14 @@
 package com.miri_and_donghak.makefriend;
 
-import javax.swing.JFrame;
+import com.miri_and_donghak.makefriend.components.ComponentManager;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.miri_and_donghak.makefriend.components.Settings;
-
-@SpringBootApplication
-public class MakeFriendApplication extends JFrame{
+//@SpringBootApplication
+public class MakeFriendApplication{
 
 	public static void main(String[] args) {
-		SpringApplication.run(MakeFriendApplication.class, args);
+		// SpringApplication.run(MakeFriendApplication.class, args);
 
-		new Settings();
+		new ComponentManager();
+		new ComponentManager();
 	}
-
 }

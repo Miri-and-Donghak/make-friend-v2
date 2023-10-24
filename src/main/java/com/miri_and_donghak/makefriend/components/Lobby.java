@@ -1,11 +1,10 @@
 package com.miri_and_donghak.makefriend.components;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Lobby extends JFrame {
-    public static JPanel createLobby(){
+public class Lobby {
+    public static JPanel getLobby(){
         JPanel lobby = new JPanel();
 
         JButton makeFriendButton = new JButton("친구 만들기");
@@ -13,6 +12,7 @@ public class Lobby extends JFrame {
 
         lobby.add(makeFriendButton);
         lobby.add(showMyFriend);
+
         return lobby;
     }
 }
