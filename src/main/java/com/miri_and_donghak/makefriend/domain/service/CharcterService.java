@@ -7,13 +7,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class CharcterService {
     private final CharcterRepository repository;
+
+    public CharcterService(CharcterRepository repository){
+        this.repository = repository;
+    }
 
     public void createCharcter(SaveCharcterRequest request){
         Charcter ct = new Charcter();
         ct.setAccessories(request.getAccessories());
+        ct.setHairstyle(request.getHairstyle());
         ct.setName(request.getName());
         ct.setDescription(request.getDescription());
 

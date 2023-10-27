@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum Accessories {
     HAT("hat"),
     SUNGLASSES("sunglasses"),
@@ -13,4 +12,8 @@ public enum Accessories {
     POOP("poop");
 
     private String name;
+
+    Accessories(String name){
+        this.name = name;
+    }
 }

@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
-public enum Hairstyles {
-    BOMB_STYLE("bomb"),
-    ;
+public enum Hairstyle {
+    BOMB_STYLE("bomb");
 
     private String name;
+
+    Hairstyle(String name){
+        this.name = name;
+    }
 }
