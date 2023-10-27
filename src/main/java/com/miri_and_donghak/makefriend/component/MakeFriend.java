@@ -1,5 +1,8 @@
 package com.miri_and_donghak.makefriend.component;
 
+import com.miri_and_donghak.makefriend.util.ButtonUtil;
+import com.miri_and_donghak.makefriend.util.FontUtil;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,8 +13,8 @@ public class MakeFriend extends JFrame{
     public MakeFriend(){
         JPanel lobby = new JPanel(new GridBagLayout());
 
-        JButton makeFriendButton = createButton("공");
-        JButton showMyFriend = createButton("사중");
+        JButton makeFriendButton = ButtonUtil.createButton("공");
+        JButton showMyFriend = ButtonUtil.createButton("사중");
 
         lobby.add(makeFriendButton);
         lobby.add(showMyFriend);
@@ -22,18 +25,5 @@ public class MakeFriend extends JFrame{
         setSize(fullsize);
 
         add(lobby);
-    }
-
-    private static Font getFonts(){
-        Font font = new Font("Pretendard Variable", Font.BOLD, 15);
-        return font;
-    }
-
-    private static JButton createButton(String title){
-        JButton button = new JButton(title);
-        button.setPreferredSize(defaultButtonSize);
-        button.setFont(getFonts());
-
-        return button;
     }
 }
