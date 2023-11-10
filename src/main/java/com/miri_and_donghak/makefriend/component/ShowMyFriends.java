@@ -19,6 +19,7 @@ public class ShowMyFriends extends JFrame{
 
         lobby.add(makeFriendButton);
         lobby.add(showMyFriend);
+        lobby.setCursor(CursorUtil.customCursor());
 
         setTitle("동학이 친구 만들기");
         setVisible(true);
