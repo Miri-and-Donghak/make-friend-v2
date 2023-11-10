@@ -71,6 +71,8 @@ public class Lobby extends JFrame {
         buttons.add(makeFriendButton);
         buttons.add(showMyFriendButton);
 
+        buttons.setBackground(new Color(0,0,0,0));
+
         return buttons;
     }
 }
