@@ -29,13 +29,14 @@ public class Lobby extends JFrame {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 if (backgroundImage != null) {
-                    g.drawImage(backgroundImage, -300, 0, this);
+                    g.drawImage(backgroundImage, -200, 0, this);
                 }
             }
         };
 
         lobby.setCursor(CursorUtil.customCursor());
         lobby.add(createButtons(), BorderLayout.SOUTH);
+        
 
         add(lobby);
         setVisible(true);
