@@ -36,7 +36,7 @@ public class Lobby extends JFrame {
 
         lobby.setCursor(CursorUtil.customCursor());
         lobby.add(createButtons(), BorderLayout.SOUTH);
-        
+
 
         add(lobby);
         setVisible(true);
