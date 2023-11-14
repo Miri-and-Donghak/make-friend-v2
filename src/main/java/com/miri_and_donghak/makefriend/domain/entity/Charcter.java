@@ -1,63 +1,33 @@
 package com.miri_and_donghak.makefriend.domain.entity;
 
-import com.miri_and_donghak.makefriend.domain.entity.enums.Accessories;
-import com.miri_and_donghak.makefriend.domain.entity.enums.Hairstyle;
+import com.miri_and_donghak.makefriend.domain.entity.enums.Designs;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
-
 @Table
 @Entity
+@Getter @Setter
 public class Charcter {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
+    private int age;
+
+    private boolean gender;
+
     private String description;
 
-    private ArrayList<Accessories> accessories;
+    @Embedded
+    private Designs designs;
 
-    private Hairstyle hairstyle;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Charcter(String name, int age, boolean gender, String description) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+        this.age = age;
+        this.gender = gender;
         this.description = description;
     }
 
-    public ArrayList<Accessories> getAccessories() {
-        return accessories;
-    }
-
-    public void setAccessories(ArrayList<Accessories> accessories) {
-        this.accessories = accessories;
-    }
-
-    public Hairstyle getHairstyle() {
-        return hairstyle;
-    }
-
-    public void setHairstyle(Hairstyle hairstyle) {
-        this.hairstyle = hairstyle;
-    }
+    public Charcter(){}
 }
