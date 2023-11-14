@@ -8,7 +8,7 @@ import lombok.Setter;
 public class InitCharcterRequest {
     private String name;
     private int age;
-    private boolean gender;
+    private String gender;
     private String description;
 
     public String getName() {
@@ -27,11 +27,11 @@ public class InitCharcterRequest {
         this.age = age;
     }
 
-    public boolean isGender() {
+    public String isGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
