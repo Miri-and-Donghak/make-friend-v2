@@ -1,5 +1,6 @@
 package com.miri_and_donghak.makefriend.component;
 
+import com.miri_and_donghak.makefriend.domain.service.CharcterService;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 import com.miri_and_donghak.makefriend.util.FontUtil;
@@ -17,6 +18,7 @@ public class Lobby extends JFrame {
     private Image backgroundImage;
 
     public Lobby() {
+
         setTitle("동학이 친구 만들기");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
