@@ -1,5 +1,6 @@
 package com.miri_and_donghak.makefriend.component;
 
+import com.miri_and_donghak.makefriend.component.panels.AccessorieList;
 import com.miri_and_donghak.makefriend.component.panels.InitCharacterPanel;
 import com.miri_and_donghak.makefriend.domain.service.CharcterService;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
@@ -18,7 +19,8 @@ public class MakeFriend extends JFrame{
     public MakeFriend(){
         setCursor(CursorUtil.customCursor());
 
-        add(BorderLayout.SOUTH ,new InitCharacterPanel());
+        add(BorderLayout.SOUTH, new InitCharacterPanel());
+        add(BorderLayout.WEST, new AccessorieList());
 
         setTitle("동학이 친구 만들기");
         setVisible(true);
