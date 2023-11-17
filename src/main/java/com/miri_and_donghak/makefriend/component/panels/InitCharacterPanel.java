@@ -5,6 +5,7 @@ import com.miri_and_donghak.makefriend.domain.service.CharcterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 @Controller
@@ -50,7 +51,8 @@ public class InitCharacterPanel extends JPanel {
         add(confirm);
 
         setLayout(new FlowLayout(FlowLayout.CENTER, 50, 30));
-        setBackground(Color.PINK);
+        setBackground(Color.decode("#EDB1B1"));
+        setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
         setVisible(true);
     }
 }
