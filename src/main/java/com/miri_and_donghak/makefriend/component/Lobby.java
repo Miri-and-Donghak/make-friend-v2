@@ -4,6 +4,7 @@ import com.miri_and_donghak.makefriend.domain.service.CharcterService;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 import com.miri_and_donghak.makefriend.util.FontUtil;
+import com.miri_and_donghak.makefriend.util.ImageUtil;
 import jakarta.persistence.Lob;
 
 import javax.swing.*;
@@ -11,20 +12,21 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.URL;
 
 public class Lobby extends JFrame {
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     private Image backgroundImage;
 
-    public Lobby() {
+    public Lobby() throws IOException {
 
         setTitle("동학이 친구 만들기");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
 
-        loadImage();
+        backgroundImage = ImageUtil.loadImage(this, "background");
 
         JPanel lobby = new JPanel(new BorderLayout()) {
             @Override
@@ -44,19 +46,7 @@ public class Lobby extends JFrame {
         setVisible(true);
     }
 
-    private void loadImage() {
-        try {
-            URL image = getClass().getResource("/images/background.png");
-            if (image != null) {
-                backgroundImage = new ImageIcon(image).getImage();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    private JPanel createButtons() {
+    private JPanel createButtons() throws IOException {
         JButton makeFriendButton = ButtonUtil.createButton("친구 만들기");
         JButton showMyFriendButton = ButtonUtil.createButton("친구한테 가기");
 

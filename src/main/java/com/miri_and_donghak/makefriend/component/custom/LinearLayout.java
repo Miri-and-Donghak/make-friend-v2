@@ -1,8 +1,9 @@
-package com.miri_and_donghak.makefriend.component.layout;
+package com.miri_and_donghak.makefriend.component.custom;
 
 import java.awt.*;
 
 public class LinearLayout extends FlowLayout {
+
     public LinearLayout() {
         super();
     }
@@ -97,5 +98,4 @@ public class LinearLayout extends FlowLayout {
             return new Dimension(0, 0);
         }
     }
-
 }

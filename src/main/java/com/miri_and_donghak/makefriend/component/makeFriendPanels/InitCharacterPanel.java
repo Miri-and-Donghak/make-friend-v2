@@ -1,6 +1,5 @@
-package com.miri_and_donghak.makefriend.component.panels;
+package com.miri_and_donghak.makefriend.component.makeFriendPanels;
 
-import com.miri_and_donghak.makefriend.domain.entity.dto.InitCharcterRequest;
 import com.miri_and_donghak.makefriend.domain.service.CharcterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
