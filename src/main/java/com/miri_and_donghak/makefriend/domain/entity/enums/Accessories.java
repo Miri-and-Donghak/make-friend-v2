@@ -5,11 +5,11 @@ import lombok.Getter;
 
 @Getter
 public enum Accessories {
-    HAT("hat"),
-    SUNGLASSES("sunglasses"),
-    PIN("hairpin"),
-    FOOD("chicken"),
-    POOP("poop");
+    HAT("accessories_cap"),
+    GLASSES("accessories_glasses"),
+    CHICKEN("accessories_chicken"),
+    POOP("accessories_poop"),
+    RIBBON("accessories_ribbon");
 
     private String name;
 
