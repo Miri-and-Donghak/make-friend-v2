@@ -1,4 +1,4 @@
-package com.miri_and_donghak.makefriend.component.makeFriendPanels;
+package com.miri_and_donghak.makefriend.component.makeFriend;
 
 import org.springframework.stereotype.Controller;
 import javax.swing.*;
