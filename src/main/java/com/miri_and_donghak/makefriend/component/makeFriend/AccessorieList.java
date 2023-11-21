@@ -1,11 +1,10 @@
-package com.miri_and_donghak.makefriend.component.makeFriendPanels;
+package com.miri_and_donghak.makefriend.component.makeFriend;
 
 import com.miri_and_donghak.makefriend.component.custom.LinearLayout;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.net.URL;
 
 public class AccessorieList extends JScrollPane {
     public AccessorieList()  {

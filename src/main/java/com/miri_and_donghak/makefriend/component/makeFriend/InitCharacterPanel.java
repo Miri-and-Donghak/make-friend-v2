@@ -1,7 +1,5 @@
-package com.miri_and_donghak.makefriend.component.makeFriendPanels;
+package com.miri_and_donghak.makefriend.component.makeFriend;
 
-import com.miri_and_donghak.makefriend.domain.service.CharcterService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -9,9 +7,6 @@ import java.awt.*;
 
 @Controller
 public class InitCharacterPanel extends JPanel {
-    @Autowired
-    private CharcterService charcterService;
-
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
     public InitCharacterPanel(){

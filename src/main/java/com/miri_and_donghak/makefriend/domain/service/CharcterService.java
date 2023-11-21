@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class CharcterService {
     private final CharcterRepository repository;
 
-    public CharcterService(CharcterRepository repository){
+    public CharcterService(CharcterRepository repository) {
         this.repository = repository;
     }
 
