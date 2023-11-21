@@ -1,5 +1,6 @@
 package com.miri_and_donghak.makefriend.component.makeFriend;
 
+import com.miri_and_donghak.makefriend.component.lobby.Lobby;
 import org.springframework.stereotype.Controller;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -10,6 +11,12 @@ public class InitCharacterPanel extends JPanel {
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
     public InitCharacterPanel(){
+        JButton goLobby = new JButton("Back");
+        goLobby.addActionListener(l -> {
+            new Lobby();
+            getRootPane().setVisible(false);
+        });
+
         JTextField nameField = new JTextField("이름");
         nameField.setPreferredSize(new Dimension(120, 35));
 
@@ -24,7 +31,6 @@ public class InitCharacterPanel extends JPanel {
 
         JButton confirm = new JButton("캐릭터 저장하기");
         confirm.setPreferredSize(new Dimension(120, 55));
-
         confirm.addActionListener(l -> {
             String name = nameField.getText();
             int age = Integer.parseInt(ageField.getText());
@@ -38,6 +44,7 @@ public class InitCharacterPanel extends JPanel {
             System.out.println(name);
         });
 
+        add(goLobby);
         add(genderField);
         add(nameField);
         add(ageField);
