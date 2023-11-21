@@ -1,6 +1,4 @@
-package com.miri_and_donghak.makefriend.component.showMyFriendsPanel;
-
-import com.miri_and_donghak.makefriend.component.custom.LinearLayout;
+package com.miri_and_donghak.makefriend.component.showMyFriends;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;

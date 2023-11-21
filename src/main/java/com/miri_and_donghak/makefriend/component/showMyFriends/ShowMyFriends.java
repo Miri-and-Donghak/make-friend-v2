@@ -1,6 +1,6 @@
-package com.miri_and_donghak.makefriend.component;
+package com.miri_and_donghak.makefriend.component.showMyFriends;
 
-import com.miri_and_donghak.makefriend.component.showMyFriendsPanel.CharacterList;
+import com.miri_and_donghak.makefriend.component.showMyFriends.CharacterList;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 
