@@ -1,8 +1,8 @@
 package com.miri_and_donghak.makefriend.component;
 
+import com.miri_and_donghak.makefriend.component.showMyFriendsPanel.CharacterList;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
-import com.miri_and_donghak.makefriend.util.FontUtil;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,5 +27,6 @@ public class ShowMyFriends extends JFrame{
         setSize(fullsize);
 
         add(lobby);
+        add(new CharacterList());
     }
 }
