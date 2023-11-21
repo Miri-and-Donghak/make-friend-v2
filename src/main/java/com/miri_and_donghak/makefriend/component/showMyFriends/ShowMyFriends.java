@@ -12,21 +12,12 @@ public class ShowMyFriends extends JFrame{
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
 
     public ShowMyFriends(){
-        JPanel lobby = new JPanel(new GridBagLayout());
+        add(new CharacterList());
 
-        JButton makeFriendButton = ButtonUtil.createButton("공");
-        JButton showMyFriend = ButtonUtil.createButton("사중");
-
-        lobby.add(makeFriendButton);
-        lobby.add(showMyFriend);
-        lobby.setCursor(CursorUtil.customCursor());
-
+        setCursor(CursorUtil.customCursor());
         setTitle("동학이 친구 만들기");
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(fullsize);
-
-        add(lobby);
-        add(new CharacterList());
     }
 }
