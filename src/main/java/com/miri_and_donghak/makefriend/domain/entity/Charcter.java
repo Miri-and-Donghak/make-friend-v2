@@ -1,8 +1,11 @@
 package com.miri_and_donghak.makefriend.domain.entity;
 
-import com.miri_and_donghak.makefriend.domain.entity.enums.Designs;
+import com.miri_and_donghak.makefriend.domain.entity.enums.Accessories;
+import com.miri_and_donghak.makefriend.domain.entity.enums.Hairstyle;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
 
 @Table
 @Entity
@@ -19,8 +22,9 @@ public class Charcter {
 
     private String description;
 
-    @Embedded
-    private Designs designs;
+    public ArrayList<Accessories> accessories;
+
+    public Hairstyle hairstyle;
 
     public Charcter(String name, int age, String gender, String description) {
         this.name = name;
