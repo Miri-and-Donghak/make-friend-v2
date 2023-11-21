@@ -19,7 +19,7 @@ public class ShowCharacterStatus extends JPanel {
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
     public ShowCharacterStatus(){
-        backgroundImage = ImageUtil.loadImage(this, "background");
+        backgroundImage = ImageUtil.loadImage(this, "makeFriendImage");
 
         add(new JButton("이건 그냥 테스트야"));
 
