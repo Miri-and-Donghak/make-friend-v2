@@ -42,7 +42,7 @@ public class Lobby extends JFrame {
 
     private JPanel createButtons() {
         JButton makeFriendButton = ButtonUtil.createButton("친구 만들기");
-        JButton showMyFriendButton = ButtonUtil.createButton("친구한테 가기");
+        JButton showMyFriendButton = ButtonUtil.createButton("친구들 보기");
 
         makeFriendButton.addActionListener(l -> {
             new MakeFriend();
