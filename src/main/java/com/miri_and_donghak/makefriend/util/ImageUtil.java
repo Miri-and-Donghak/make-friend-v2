@@ -6,12 +6,9 @@ import java.net.URL;
 
 public class ImageUtil {
     public static Image loadImage(Object currentSource, String imageName) {
-        Image finalImage = null;
 
         URL image = currentSource.getClass().getResource("/images/" + imageName + ".png");
-        // /imgaes/background.png
-        if (image != null) finalImage = new ImageIcon(image).getImage();
-
-        return finalImage;
+        assert image != null;
+        return new ImageIcon(image).getImage();
     }
 }

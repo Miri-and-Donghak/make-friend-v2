@@ -7,7 +7,6 @@ public class LinearLayout extends FlowLayout {
     public LinearLayout() {
         super();
     }
-
     public LinearLayout(int align) {
         super(align);
     }
