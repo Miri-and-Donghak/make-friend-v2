@@ -11,20 +11,24 @@ public class InitCharacterPanel extends JPanel {
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
     public InitCharacterPanel(){
-        JButton goLobby = new JButton("Back");
+        JButton goLobby = new JButton("메인으로 돌아가기");
+        goLobby.setPreferredSize(new Dimension(120, 55));
         goLobby.addActionListener(l -> {
             new Lobby();
             getRootPane().setVisible(false);
         });
-
-        JTextField nameField = new JTextField("이름");
+        JLabel nameText = new JLabel("이름 :");
+        JLabel genderText = new JLabel("성별 선택하기 :");
+        JLabel ageText = new JLabel("나이 :");
+        JLabel descriptionText = new JLabel("캐릭터 설명 :");
+        JTextField nameField = new JTextField();
         nameField.setPreferredSize(new Dimension(120, 35));
 
-        JTextField ageField = new JTextField("나이");
+        JTextField ageField = new JTextField();
         ageField.setPreferredSize(new Dimension(120, 35));
 
-        JTextField descriptionField = new JTextField("설명");
-        descriptionField.setPreferredSize(new Dimension(120, 35));
+        JTextField descriptionField = new JTextField();
+        descriptionField.setPreferredSize(new Dimension(500, 35));
 
         JComboBox<String> genderField = new JComboBox<>(gender);
         genderField.setPreferredSize(new Dimension(120, 35));
@@ -44,14 +48,19 @@ public class InitCharacterPanel extends JPanel {
             System.out.println(name);
         });
 
-        add(goLobby);
+
+        add(genderText);
         add(genderField);
+        add(nameText);
         add(nameField);
+        add(ageText);
         add(ageField);
+        add(descriptionText);
         add(descriptionField);
+        add(goLobby);
         add(confirm);
 
-        setLayout(new FlowLayout(FlowLayout.CENTER, 50, 30));
+        setLayout(new FlowLayout(FlowLayout.CENTER, 10, 30));
         setBackground(Color.decode("#EDB1B1"));
         setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
         setVisible(true);
