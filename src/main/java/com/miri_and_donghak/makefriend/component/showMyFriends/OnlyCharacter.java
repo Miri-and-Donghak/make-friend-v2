@@ -5,7 +5,7 @@ import com.miri_and_donghak.makefriend.util.CursorUtil;
 import javax.swing.*;
 import java.awt.*;
 
-class OnlyCharacter extends JPanel {
+public class OnlyCharacter extends JPanel {
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
 
     OnlyCharacter(){
