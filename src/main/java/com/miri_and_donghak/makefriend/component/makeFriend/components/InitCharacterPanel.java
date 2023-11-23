@@ -1,8 +1,7 @@
-package com.miri_and_donghak.makefriend.component.makeFriend;
+package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
-import com.miri_and_donghak.makefriend.component.custom.SwingContainer;
-import com.miri_and_donghak.makefriend.component.lobby.Lobby;
-import org.springframework.stereotype.Controller;
+import com.miri_and_donghak.makefriend.custom.SwingContainer;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;

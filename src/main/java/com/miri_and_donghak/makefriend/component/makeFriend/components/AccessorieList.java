@@ -1,6 +1,6 @@
-package com.miri_and_donghak.makefriend.component.makeFriend;
+package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
-import com.miri_and_donghak.makefriend.component.custom.LinearLayout;
+import com.miri_and_donghak.makefriend.custom.LinearLayout;
 import com.miri_and_donghak.makefriend.util.ImageUtil;
 
 import javax.swing.*;
