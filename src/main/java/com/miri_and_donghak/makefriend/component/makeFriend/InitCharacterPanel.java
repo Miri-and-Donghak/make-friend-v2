@@ -1,21 +1,23 @@
 package com.miri_and_donghak.makefriend.component.makeFriend;
 
+import com.miri_and_donghak.makefriend.component.custom.SwingContainer;
 import com.miri_and_donghak.makefriend.component.lobby.Lobby;
 import org.springframework.stereotype.Controller;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-@Controller
 public class InitCharacterPanel extends JPanel {
+    private final SwingContainer swingContainer;
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
-    public InitCharacterPanel(){
+    public InitCharacterPanel(SwingContainer swingContainer){
+        this.swingContainer = swingContainer;
+
         JButton goLobby = new JButton("메인으로 돌아가기");
         goLobby.setPreferredSize(new Dimension(120, 55));
         goLobby.addActionListener(l -> {
-            new Lobby();
-            getRootPane().setVisible(false);
+            swingContainer.onlyLobby();
         });
         JLabel nameText = new JLabel("이름 :");
         JLabel genderText = new JLabel("성별 선택하기 :");

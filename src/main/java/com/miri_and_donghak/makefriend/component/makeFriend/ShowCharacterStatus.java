@@ -1,6 +1,5 @@
 package com.miri_and_donghak.makefriend.component.makeFriend;
 
-import com.miri_and_donghak.makefriend.domain.service.CharcterService;
 import com.miri_and_donghak.makefriend.util.ImageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,10 +11,6 @@ import java.awt.*;
 @Controller
 public class ShowCharacterStatus extends JPanel {
     private Image backgroundImage;
-
-    @Autowired
-    private CharcterService charcterService;
-
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
     public ShowCharacterStatus(){
