@@ -1,4 +1,4 @@
-package com.miri_and_donghak.makefriend.component.custom;
+package com.miri_and_donghak.makefriend.custom;
 
 import com.miri_and_donghak.makefriend.component.lobby.Lobby;
 import com.miri_and_donghak.makefriend.component.makeFriend.MakeFriend;

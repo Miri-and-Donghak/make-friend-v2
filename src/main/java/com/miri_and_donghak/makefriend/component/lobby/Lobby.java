@@ -1,19 +1,12 @@
 package com.miri_and_donghak.makefriend.component.lobby;
 
-import com.miri_and_donghak.makefriend.component.custom.SwingContainer;
-import com.miri_and_donghak.makefriend.component.makeFriend.MakeFriend;
-import com.miri_and_donghak.makefriend.component.showMyFriends.ShowMyFriends;
+import com.miri_and_donghak.makefriend.custom.SwingContainer;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 import com.miri_and_donghak.makefriend.util.ImageUtil;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.*;
 import java.awt.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
 public class Lobby extends JFrame {
     private final SwingContainer swingContainer;

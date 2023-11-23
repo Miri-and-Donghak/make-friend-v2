@@ -1,9 +1,8 @@
 package com.miri_and_donghak.makefriend;
 
-import com.miri_and_donghak.makefriend.component.custom.SwingContainer;
+import com.miri_and_donghak.makefriend.custom.SwingContainer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.io.IOException;
 
 @SpringBootApplication
 public class MakeFriendApplication {

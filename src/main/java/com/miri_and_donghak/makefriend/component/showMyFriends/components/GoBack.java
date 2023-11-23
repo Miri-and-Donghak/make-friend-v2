@@ -1,6 +1,6 @@
-package com.miri_and_donghak.makefriend.component.showMyFriends;
+package com.miri_and_donghak.makefriend.component.showMyFriends.components;
 
-import com.miri_and_donghak.makefriend.component.custom.SwingContainer;
+import com.miri_and_donghak.makefriend.custom.SwingContainer;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 
 import javax.swing.*;

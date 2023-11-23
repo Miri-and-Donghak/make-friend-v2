@@ -1,4 +1,4 @@
-package com.miri_and_donghak.makefriend.component.makeFriend;
+package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
 import com.miri_and_donghak.makefriend.util.ImageUtil;
 import org.springframework.beans.factory.annotation.Autowired;

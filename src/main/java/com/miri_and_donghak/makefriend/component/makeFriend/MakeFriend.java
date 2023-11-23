@@ -1,9 +1,9 @@
 package com.miri_and_donghak.makefriend.component.makeFriend;
 
-import com.miri_and_donghak.makefriend.component.custom.SwingContainer;
-import com.miri_and_donghak.makefriend.component.makeFriend.AccessorieList;
-import com.miri_and_donghak.makefriend.component.makeFriend.InitCharacterPanel;
-import com.miri_and_donghak.makefriend.component.makeFriend.ShowCharacterStatus;
+import com.miri_and_donghak.makefriend.custom.SwingContainer;
+import com.miri_and_donghak.makefriend.component.makeFriend.components.AccessorieList;
+import com.miri_and_donghak.makefriend.component.makeFriend.components.InitCharacterPanel;
+import com.miri_and_donghak.makefriend.component.makeFriend.components.ShowCharacterStatus;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 
 import javax.swing.*;
