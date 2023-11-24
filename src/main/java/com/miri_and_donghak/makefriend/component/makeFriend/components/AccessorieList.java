@@ -14,12 +14,13 @@ public class AccessorieList extends JScrollPane {
         panel.setBackground(Color.decode("#EDB1B1"));
         panel.setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
 
+        panel.add(new JButton("~.~악세사리 선택~.~"));
         panel.add(createAccButton("cap"));
         panel.add(createAccButton("chicken"));
         panel.add(createAccButton("glasses"));
         panel.add(createAccButton("poop"));
         panel.add(createAccButton("ribbon"));
-        panel.add(new JButton("----------"));
+        panel.add(new JButton("~.~헤어스타일 선택~.~"));
         panel.add(createHairButton("long"));
         panel.add(createHairButton("short"));
 

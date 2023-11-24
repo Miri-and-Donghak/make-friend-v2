@@ -16,8 +16,10 @@ public class ShowCharacterStatus extends JPanel {
     public ShowCharacterStatus(){
         backgroundImage = ImageUtil.loadImage(this, "makeFriendImage");
 
-        add(new JButton("이건 그냥 테스트야"));
+        add(new ShowCharacter("character"));
+        add(new ShowCharacter("hairstyle_long"));
 
+        setLayout(new OverlayLayout(this));
         setBackground(Color.decode("#F7DBDB"));
         setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
         setVisible(true);
