@@ -35,7 +35,7 @@ public class AccessorieList extends JScrollPane {
         Image background = ImageUtil.loadImage(this, "makeCharacter/" + url);
         background = background.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
         ImageIcon buttonImage = new ImageIcon(background);
-
+        
         return new JButton(buttonImage);
     }
 
