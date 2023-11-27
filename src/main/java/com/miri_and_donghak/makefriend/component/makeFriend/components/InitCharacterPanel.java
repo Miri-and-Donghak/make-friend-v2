@@ -1,23 +1,23 @@
 package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
 import com.miri_and_donghak.makefriend.custom.SwingContainer;
+import com.miri_and_donghak.makefriend.domain.entity.Charcter;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class InitCharacterPanel extends JPanel {
     private final SwingContainer swingContainer;
+    private Component parent;
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
-    public InitCharacterPanel(SwingContainer swingContainer){
+    public InitCharacterPanel(SwingContainer swingContainer, Component parent){
         this.swingContainer = swingContainer;
+        this.parent = parent;
 
-        JButton goLobby = new JButton("메인으로 돌아가기");
-        goLobby.setPreferredSize(new Dimension(120, 55));
-        goLobby.addActionListener(l -> {
-            swingContainer.onlyLobby();
-        });
         JLabel nameText = new JLabel("이름 :");
         JLabel genderText = new JLabel("성별 선택하기 :");
         JLabel ageText = new JLabel("나이 :");
@@ -42,13 +42,21 @@ public class InitCharacterPanel extends JPanel {
             String gender = genderField.getSelectedIndex() == 0 ? "male" : "female";
             String description = descriptionField.getText();
 
-            System.out.println(name);
-            System.out.println(gender);
-//            charcterService.initCharcter(new InitCharcterRequest(name, age, gender, description));
+            Charcter charcter = new Charcter();
+            charcter.setName(name);
+            charcter.setAge(age);
+            charcter.setGender(gender);
+            charcter.setDescription(description);
 
-            System.out.println(name);
+            swingContainer.addCharcter(charcter);
+            System.out.println(swingContainer.getCharcter().getAge());
         });
 
+        JButton goLobby = new JButton("메인으로 돌아가기");
+        goLobby.setPreferredSize(new Dimension(120, 55));
+        goLobby.addActionListener(l -> {
+            swingContainer.onlyLobby();
+        });
 
         add(genderText);
         add(genderField);

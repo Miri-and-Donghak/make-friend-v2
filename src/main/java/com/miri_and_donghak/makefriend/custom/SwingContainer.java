@@ -3,9 +3,11 @@ package com.miri_and_donghak.makefriend.custom;
 import com.miri_and_donghak.makefriend.component.lobby.Lobby;
 import com.miri_and_donghak.makefriend.component.makeFriend.MakeFriend;
 import com.miri_and_donghak.makefriend.component.showMyFriends.ShowMyFriends;
+import com.miri_and_donghak.makefriend.domain.entity.Charcter;
 import jakarta.persistence.Lob;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class SwingContainer {
     private final Lobby lobby;
@@ -34,6 +36,14 @@ public class SwingContainer {
         makeFriend.setVisible(true);
         lobby.setVisible(false);
         showMyFriends.setVisible(false);
+    }
+
+    public void addCharcter(Charcter charcter) {
+        makeFriend.addCharcter(charcter);
+    }
+
+    public Charcter getCharcter() {
+        return makeFriend.getCharcter();
     }
 
     public void onlyShowMyFriends() {
