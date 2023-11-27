@@ -57,7 +57,6 @@ public class AccessorieList extends JScrollPane {
         JButton button = new JButton(buttonImage);
         button.addActionListener(l -> {
             System.out.println(url);
-            frameContainer.getCharcterOnMakeFriend().addAccessories(Accessories.CHICKEN);
         });
 
         return button;
