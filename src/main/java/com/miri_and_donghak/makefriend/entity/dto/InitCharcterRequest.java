@@ -1,4 +1,4 @@
-package com.miri_and_donghak.makefriend.domain.entity.dto;
+package com.miri_and_donghak.makefriend.entity.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

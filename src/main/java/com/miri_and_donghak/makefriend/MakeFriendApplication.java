@@ -1,16 +1,11 @@
 package com.miri_and_donghak.makefriend;
 
-import com.miri_and_donghak.makefriend.custom.SwingContainer;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.miri_and_donghak.makefriend.custom.FrameContainer;
 
-@SpringBootApplication
 public class MakeFriendApplication {
 	public static void main(String[] args){
-		SwingContainer container = new SwingContainer();
+		FrameContainer container = new FrameContainer();
 
 		container.onlyLobby();
-
-		SpringApplication.run(MakeFriendApplication.class, args);
 	}
 }

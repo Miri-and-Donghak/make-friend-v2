@@ -1,4 +1,4 @@
-package com.miri_and_donghak.makefriend.domain.entity.enums;
+package com.miri_and_donghak.makefriend.entity.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
