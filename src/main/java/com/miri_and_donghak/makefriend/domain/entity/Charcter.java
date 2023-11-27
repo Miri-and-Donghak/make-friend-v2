@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 @Table
 @Entity
-@Getter @Setter
 public class Charcter {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,4 +33,60 @@ public class Charcter {
     }
 
     public Charcter(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public ArrayList<Accessories> getAccessories() {
+        return accessories;
+    }
+
+    public void setAccessories(ArrayList<Accessories> accessories) {
+        this.accessories = accessories;
+    }
+
+    public Hairstyle getHairstyle() {
+        return hairstyle;
+    }
+
+    public void setHairstyle(Hairstyle hairstyle) {
+        this.hairstyle = hairstyle;
+    }
 }
