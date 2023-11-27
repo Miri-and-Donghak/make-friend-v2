@@ -11,7 +11,12 @@ public class InitCharacterPanel extends JPanel {
     private final FrameContainer frameContainer;
     private Component parent;
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
-    String[] gender = {"남자", "여자"};
+    String[] genders = {"남자", "여자"};
+
+    String name;
+    int age;
+    String gender;
+    String description;
     public InitCharacterPanel(FrameContainer frameContainer, Component parent){
         this.frameContainer = frameContainer;
 
@@ -28,18 +33,19 @@ public class InitCharacterPanel extends JPanel {
         JTextField descriptionField = new JTextField();
         descriptionField.setPreferredSize(new Dimension(500, 35));
 
-        JComboBox<String> genderField = new JComboBox<>(gender);
+        JComboBox<String> genderField = new JComboBox<>(genders);
         genderField.setPreferredSize(new Dimension(120, 35));
 
         JButton confirm = new JButton("캐릭터 저장하기");
         confirm.setPreferredSize(new Dimension(120, 55));
         confirm.addActionListener(l -> {
-            String name = nameField.getText();
-            int age = Integer.parseInt(ageField.getText());
-            String gender = genderField.getSelectedIndex() == 0 ? "male" : "female";
-            String description = descriptionField.getText();
+            name = nameField.getText();
+            age = Integer.parseInt(ageField.getText());
+            gender = genderField.getSelectedIndex() == 0 ? "male" : "female";
+            description = descriptionField.getText();
 
             Character character = new Character(age, gender, description);
+            character.setAccessories(frameContainer.getCharacterAccessorie());
 
             frameContainer.addCharacter(character, name);
 
@@ -68,5 +74,10 @@ public class InitCharacterPanel extends JPanel {
         setBackground(Color.decode("#EDB1B1"));
         setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
         setVisible(true);
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

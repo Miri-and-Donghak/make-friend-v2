@@ -50,8 +50,8 @@ public class Character {
         return accessories;
     }
 
-    public void addAccessories(Accessories accessorie) {
-        accessories.add(accessorie);
+    public void setAccessories(ArrayList<Accessories> accessories) {
+        this.accessories = accessories;
     }
 
     public Hairstyle getHairstyle() {

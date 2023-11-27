@@ -12,7 +12,8 @@ public class OnlyCharacter extends JPanel {
     OnlyCharacter(String name, Character character){
         setCursor(CursorUtil.customCursor());
         add(new Button(name));
-
+//        add(new Button(character.getDescription()));
+        System.out.println(character);
         setPreferredSize(new Dimension(350, fullsize.height));
     }
 }
