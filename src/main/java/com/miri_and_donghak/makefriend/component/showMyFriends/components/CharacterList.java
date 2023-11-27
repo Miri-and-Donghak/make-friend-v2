@@ -28,7 +28,7 @@ public class CharacterList extends JScrollPane{
         for (Map.Entry<String, Character> entry : characters.entrySet()) {
             String key = entry.getKey();
             Character value = entry.getValue();
-            panel.add(new OnlyCharacter(key, value));
+            panel.add(new OnlyCharacter(key, value, frameContainer));
         }
 
         setViewportView(panel);
