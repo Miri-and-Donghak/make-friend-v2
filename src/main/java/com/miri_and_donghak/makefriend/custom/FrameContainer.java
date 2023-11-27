@@ -7,13 +7,14 @@ import com.miri_and_donghak.makefriend.component.showMyFriends.ShowMyFriends;
 import com.miri_and_donghak.makefriend.entity.Character;
 import com.miri_and_donghak.makefriend.entity.enums.Accessories;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
 public class FrameContainer {
     private HashMap<String ,Character> characters = new HashMap<>();
-    private final Lobby lobby;
-    private final MakeFriend makeFriend;
+    private Lobby lobby;
+    private MakeFriend makeFriend;
 
     private ShowMyFriends showMyFriends;
 
@@ -34,7 +35,6 @@ public class FrameContainer {
         makeFriend.setVisible(false);
         showMyFriends.setVisible(false);
     }
-
 
     public void onlyMakeFriend() {
         makeFriend.setVisible(true);
@@ -61,11 +61,11 @@ public class FrameContainer {
         return characters;
     }
 
-    public ArrayList<Accessories> getCharacterAccessorie(){
+    public HashSet<Accessories> getCharacterAccessorie(){
         return makeFriend.getAccessorieList();
     }
 
-    public void addShowCharacterStatus(ArrayList<Accessories> accessories){
+    public void addShowCharacterStatus(HashSet<Accessories> accessories){
         for(Accessories ac : accessories){
             makeFriend.getShowCharacterStatus().add(new ShowCharacter(ac.getName()));
         }

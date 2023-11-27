@@ -4,6 +4,7 @@ import com.miri_and_donghak.makefriend.entity.enums.Accessories;
 import com.miri_and_donghak.makefriend.entity.enums.Hairstyle;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Character {
     private int age;
@@ -12,7 +13,7 @@ public class Character {
 
     private String description;
 
-    public ArrayList<Accessories> accessories = new ArrayList<>();
+    public HashSet<Accessories> accessories = new HashSet<>();
 
     public Hairstyle hairstyle;
 
@@ -46,11 +47,11 @@ public class Character {
         this.description = description;
     }
 
-    public ArrayList<Accessories> getAccessories() {
+    public HashSet<Accessories> getAccessories() {
         return accessories;
     }
 
-    public void setAccessories(ArrayList<Accessories> accessories) {
+    public void setAccessories(HashSet<Accessories> accessories) {
         this.accessories = accessories;
     }
 

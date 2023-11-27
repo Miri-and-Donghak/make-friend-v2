@@ -10,6 +10,7 @@ import com.miri_and_donghak.makefriend.util.CursorUtil;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class MakeFriend extends JFrame{
     private final FrameContainer frameContainer;
@@ -36,7 +37,7 @@ public class MakeFriend extends JFrame{
         setSize(fullsize);
     }
 
-    public ArrayList<Accessories> getAccessorieList() {
+    public HashSet<Accessories> getAccessorieList() {
         return accessorieList.getAccessories();
     }
 

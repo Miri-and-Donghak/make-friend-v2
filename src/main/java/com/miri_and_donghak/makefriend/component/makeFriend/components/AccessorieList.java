@@ -9,10 +9,11 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class AccessorieList extends JScrollPane {
     private final FrameContainer frameContainer;
-    private ArrayList<Accessories> accessories = new ArrayList<>();
+    private HashSet<Accessories> accessories = new HashSet<>();
 
     public AccessorieList(FrameContainer frameContainer)  {
         this.frameContainer = frameContainer;
@@ -58,14 +59,14 @@ public class AccessorieList extends JScrollPane {
 
         JButton button = new JButton(buttonImage);
         button.addActionListener(l -> {
-            accessories.add(Accessories.valueOf(url.toUpperCase()));
             frameContainer.addShowCharacterStatus(accessories);
+            accessories.add(Accessories.valueOf(url.toUpperCase()));
         });
 
         return button;
     }
 
-    public ArrayList<Accessories> getAccessories() {
+    public HashSet<Accessories> getAccessories() {
         return accessories;
     }
 }
