@@ -44,7 +44,6 @@ public class InitCharacterPanel extends JPanel {
             frameContainer.addCharacter(character, name);
 
             Character test = frameContainer.findCharacterByName(name);
-
             System.out.println(test.toString());
         });
 

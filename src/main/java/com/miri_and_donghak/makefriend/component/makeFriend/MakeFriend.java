@@ -16,7 +16,6 @@ public class MakeFriend extends JFrame{
     private static Dimension defaultButtonSize = new Dimension(250, 80);
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    public ArrayList<Character> characterList = new ArrayList<>();
     public MakeFriend(FrameContainer frameContainer) {
         this.frameContainer = frameContainer;
 
@@ -30,14 +29,5 @@ public class MakeFriend extends JFrame{
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(fullsize);
-    }
-
-    public void addCharcter(Character character){
-        if(characterList == null) characterList = new ArrayList<>();
-        characterList.add(character);
-    }
-
-    public Character getCharcter(){
-        return characterList.get(0);
     }
 }

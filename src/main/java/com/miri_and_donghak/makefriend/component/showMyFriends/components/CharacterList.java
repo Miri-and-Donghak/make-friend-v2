@@ -1,11 +1,14 @@
 package com.miri_and_donghak.makefriend.component.showMyFriends.components;
 
 import com.miri_and_donghak.makefriend.custom.FrameContainer;
+import com.miri_and_donghak.makefriend.entity.Character;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CharacterList extends JScrollPane{
     private final FrameContainer frameContainer;
@@ -20,7 +23,13 @@ public class CharacterList extends JScrollPane{
         panel.setBackground(Color.decode("#EDB1B1"));
         panel.setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
         panel.add(new GoBack(frameContainer));
-        for(int i = 1; i <= 10; i++) panel.add(new OnlyCharacter());
+
+        HashMap<String, Character> characters = frameContainer.findAllCharacter();
+        for (Map.Entry<String, Character> entry : characters.entrySet()) {
+            String key = entry.getKey();
+            Character value = entry.getValue();
+            panel.add(new OnlyCharacter(key, value));
+        }
 
         setViewportView(panel);
         setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);

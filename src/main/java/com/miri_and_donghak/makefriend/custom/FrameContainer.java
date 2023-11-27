@@ -5,14 +5,12 @@ import com.miri_and_donghak.makefriend.component.makeFriend.MakeFriend;
 import com.miri_and_donghak.makefriend.component.showMyFriends.ShowMyFriends;
 import com.miri_and_donghak.makefriend.entity.Character;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class FrameContainer {
     private final Lobby lobby;
     private final MakeFriend makeFriend;
-    private final ShowMyFriends showMyFriends;
+    private ShowMyFriends showMyFriends;
 
     public HashMap<String ,Character> characters = new HashMap<>();
 
@@ -41,6 +39,7 @@ public class FrameContainer {
     }
 
     public void onlyShowMyFriends() {
+        showMyFriends = new ShowMyFriends(this);
         showMyFriends.setVisible(true);
         makeFriend.setVisible(false);
         lobby.setVisible(false);
@@ -52,5 +51,9 @@ public class FrameContainer {
 
     public Character findCharacterByName(String name){
         return characters.get(name);
+    }
+
+    public HashMap<String, Character> findAllCharacter(){
+        return characters;
     }
 }
