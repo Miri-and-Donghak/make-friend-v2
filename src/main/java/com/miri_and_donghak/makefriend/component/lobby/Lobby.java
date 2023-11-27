@@ -1,6 +1,6 @@
 package com.miri_and_donghak.makefriend.component.lobby;
 
-import com.miri_and_donghak.makefriend.custom.SwingContainer;
+import com.miri_and_donghak.makefriend.custom.FrameContainer;
 import com.miri_and_donghak.makefriend.util.ButtonUtil;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 import com.miri_and_donghak.makefriend.util.ImageUtil;
@@ -9,12 +9,12 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Lobby extends JFrame {
-    private final SwingContainer swingContainer;
+    private final FrameContainer frameContainer;
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     private Image backgroundImage;
 
-    public Lobby(SwingContainer swingContainer){
-        this.swingContainer = swingContainer;
+    public Lobby(FrameContainer frameContainer){
+        this.frameContainer = frameContainer;
 
         setTitle("동학이 친구 만들기");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,10 +46,10 @@ public class Lobby extends JFrame {
         JButton showMyFriendButton = ButtonUtil.createButton("친구들 보기");
 
         makeFriendButton.addActionListener(l -> {
-            swingContainer.onlyMakeFriend();
+            frameContainer.onlyMakeFriend();
         });
         showMyFriendButton.addActionListener(l -> {
-            swingContainer.onlyShowMyFriends();
+            frameContainer.onlyShowMyFriends();
         });
 
         JPanel buttons = new JPanel();

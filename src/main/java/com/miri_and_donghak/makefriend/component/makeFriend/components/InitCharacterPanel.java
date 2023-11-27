@@ -1,22 +1,19 @@
 package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
-import com.miri_and_donghak.makefriend.custom.SwingContainer;
-import com.miri_and_donghak.makefriend.domain.entity.Charcter;
+import com.miri_and_donghak.makefriend.custom.FrameContainer;
+import com.miri_and_donghak.makefriend.entity.Charcter;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class InitCharacterPanel extends JPanel {
-    private final SwingContainer swingContainer;
+    private final FrameContainer frameContainer;
     private Component parent;
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
-    public InitCharacterPanel(SwingContainer swingContainer, Component parent){
-        this.swingContainer = swingContainer;
-        this.parent = parent;
+    public InitCharacterPanel(FrameContainer frameContainer, Component parent){
+        this.frameContainer = frameContainer;
 
         JLabel nameText = new JLabel("이름 :");
         JLabel genderText = new JLabel("성별 선택하기 :");
@@ -48,14 +45,15 @@ public class InitCharacterPanel extends JPanel {
             charcter.setGender(gender);
             charcter.setDescription(description);
 
-            swingContainer.addCharcter(charcter);
-            System.out.println(swingContainer.getCharcter().getAge());
+            frameContainer.addCharcterOnMakeFriend(charcter);
+            System.out.println(frameContainer.getCharcterOnMakeFriend().getAge());
+            System.out.println(frameContainer.getCharcterOnMakeFriend().getAccessories().get(0));
         });
 
         JButton goLobby = new JButton("메인으로 돌아가기");
         goLobby.setPreferredSize(new Dimension(120, 55));
         goLobby.addActionListener(l -> {
-            swingContainer.onlyLobby();
+            frameContainer.onlyLobby();
         });
 
         add(genderText);

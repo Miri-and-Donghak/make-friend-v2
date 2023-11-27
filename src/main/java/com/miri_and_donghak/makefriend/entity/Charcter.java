@@ -1,17 +1,11 @@
-package com.miri_and_donghak.makefriend.domain.entity;
+package com.miri_and_donghak.makefriend.entity;
 
-import com.miri_and_donghak.makefriend.domain.entity.enums.Accessories;
-import com.miri_and_donghak.makefriend.domain.entity.enums.Hairstyle;
-import jakarta.persistence.*;
-import lombok.*;
+import com.miri_and_donghak.makefriend.entity.enums.Accessories;
+import com.miri_and_donghak.makefriend.entity.enums.Hairstyle;
 
 import java.util.ArrayList;
 
-@Table
-@Entity
 public class Charcter {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     private String name;
 
@@ -34,13 +28,6 @@ public class Charcter {
 
     public Charcter(){}
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -78,8 +65,9 @@ public class Charcter {
         return accessories;
     }
 
-    public void setAccessories(ArrayList<Accessories> accessories) {
-        this.accessories = accessories;
+    public void addAccessories(Accessories accessorie) {
+        if(accessories == null) accessories = new ArrayList<>();
+        this.accessories.add(accessorie);
     }
 
     public Hairstyle getHairstyle() {

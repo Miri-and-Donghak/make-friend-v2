@@ -1,14 +1,11 @@
 package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
 import com.miri_and_donghak.makefriend.util.ImageUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-@Controller
 public class ShowCharacterStatus extends JPanel {
     private Image backgroundImage;
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();

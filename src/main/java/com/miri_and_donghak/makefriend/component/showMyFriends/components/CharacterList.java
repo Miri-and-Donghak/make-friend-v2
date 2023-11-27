@@ -1,6 +1,6 @@
 package com.miri_and_donghak.makefriend.component.showMyFriends.components;
 
-import com.miri_and_donghak.makefriend.custom.SwingContainer;
+import com.miri_and_donghak.makefriend.custom.FrameContainer;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 
 import javax.swing.*;
@@ -8,10 +8,10 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class CharacterList extends JScrollPane{
-    private final SwingContainer swingContainer;
+    private final FrameContainer frameContainer;
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
-    public CharacterList(SwingContainer swingContainer){
-        this.swingContainer = swingContainer;
+    public CharacterList(FrameContainer frameContainer){
+        this.frameContainer = frameContainer;
 
         setCursor(CursorUtil.customCursor());
 
@@ -19,7 +19,7 @@ public class CharacterList extends JScrollPane{
         panel.setLayout(new FlowLayout());
         panel.setBackground(Color.decode("#EDB1B1"));
         panel.setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
-        panel.add(new GoBack(swingContainer));
+        panel.add(new GoBack(frameContainer));
         for(int i = 1; i <= 10; i++) panel.add(new OnlyCharacter());
 
         setViewportView(panel);
