@@ -1,5 +1,6 @@
 package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
+import com.miri_and_donghak.makefriend.custom.FrameContainer;
 import com.miri_and_donghak.makefriend.util.ImageUtil;
 
 import javax.swing.*;
@@ -10,7 +11,7 @@ public class ShowCharacterStatus extends JPanel {
     private Image backgroundImage;
     public static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
     String[] gender = {"남자", "여자"};
-    public ShowCharacterStatus(){
+    public ShowCharacterStatus(FrameContainer frameContainer){
         backgroundImage = ImageUtil.loadImage(this, "makeFriendImage");
 
         add(new ShowCharacter("character"));

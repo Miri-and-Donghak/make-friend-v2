@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class AccessorieList extends JScrollPane {
     private final FrameContainer frameContainer;
+    private ArrayList<Accessories> accessories = new ArrayList<>();
+
     public AccessorieList(FrameContainer frameContainer)  {
         this.frameContainer = frameContainer;
 
@@ -21,22 +23,22 @@ public class AccessorieList extends JScrollPane {
         panel.setBorder(new LineBorder(Color.decode("#F8DEDE"), 2, true));
 
         ArrayList<JButton> accessorieList = new ArrayList<>();
-        accessorieList.add(createAccButton("cap"));
-        accessorieList.add(createAccButton("chicken"));
-        accessorieList.add(createAccButton("glasses"));
-        accessorieList.add(createAccButton("poop"));
-        accessorieList.add(createAccButton("ribbon"));
+        accessorieList.add(createImageButton("accessories_cap"));
+        accessorieList.add(createImageButton("accessories_chicken"));
+        accessorieList.add(createImageButton("accessories_glasses"));
+        accessorieList.add(createImageButton("accessories_poop"));
+        accessorieList.add(createImageButton("accessories_ribbon"));
 
         ArrayList<JButton> hairList = new ArrayList<>();
-        hairList.add(createHairButton("long"));
-        hairList.add(createHairButton("short"));
+        hairList.add(createImageButton("hairstyle_long"));
+        hairList.add(createImageButton("hairstyle_short"));
 
         panel.add(new JButton("~.~악세사리 선택~.~"));
         for(JButton i : accessorieList){
             panel.add(i);
         }
 
-        panel.add(new JButton("~.~헤어스타ㅁ 선택~.~"));
+        panel.add(new JButton("~.~헤어스타일 선택~.~"));
         for(JButton i : hairList){
             panel.add(i);
         }
@@ -56,17 +58,14 @@ public class AccessorieList extends JScrollPane {
 
         JButton button = new JButton(buttonImage);
         button.addActionListener(l -> {
-            System.out.println(url);
+            accessories.add(Accessories.valueOf(url.toUpperCase()));
+            frameContainer.addShowCharacterStatus(accessories);
         });
 
         return button;
     }
 
-    private JButton createAccButton(String url){
-        return createImageButton("accessories_" + url);
-    }
-
-    private JButton createHairButton(String url){
-        return createImageButton("hairstyle_" + url);
+    public ArrayList<Accessories> getAccessories() {
+        return accessories;
     }
 }

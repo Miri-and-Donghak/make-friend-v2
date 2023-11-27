@@ -5,8 +5,8 @@ import lombok.Getter;
 
 @Getter
 public enum Hairstyle {
-    LONG("hairstyle_long"),
-    SHORT("hairstyle_short");
+    HAIRSTYLE_LONG("hairstyle_long"),
+    HAIRSTYLE_SHORT("hairstyle_short");
 
     private String name;
 
