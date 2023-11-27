@@ -14,8 +14,8 @@ public class ShowCharacterStatus extends JPanel {
     public ShowCharacterStatus(FrameContainer frameContainer){
         backgroundImage = ImageUtil.loadImage(this, "makeFriendImage");
 
-        add(new ShowCharacter("character"));
         add(new ShowCharacter("hairstyle_long"));
+        add(new ShowCharacter("character"));
 
         setLayout(new OverlayLayout(this));
         setBackground(Color.decode("#F7DBDB"));

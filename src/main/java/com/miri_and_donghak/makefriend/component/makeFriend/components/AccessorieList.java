@@ -30,17 +30,7 @@ public class AccessorieList extends JScrollPane {
         accessorieList.add(createImageButton("accessories_poop"));
         accessorieList.add(createImageButton("accessories_ribbon"));
 
-        ArrayList<JButton> hairList = new ArrayList<>();
-        hairList.add(createImageButton("hairstyle_long"));
-        hairList.add(createImageButton("hairstyle_short"));
-
-        panel.add(new JButton("~.~악세사리 선택~.~"));
         for(JButton i : accessorieList){
-            panel.add(i);
-        }
-
-        panel.add(new JButton("~.~헤어스타일 선택~.~"));
-        for(JButton i : hairList){
             panel.add(i);
         }
 

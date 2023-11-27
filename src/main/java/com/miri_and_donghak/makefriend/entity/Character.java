@@ -1,9 +1,7 @@
 package com.miri_and_donghak.makefriend.entity;
 
 import com.miri_and_donghak.makefriend.entity.enums.Accessories;
-import com.miri_and_donghak.makefriend.entity.enums.Hairstyle;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Character {
@@ -14,8 +12,6 @@ public class Character {
     private String description;
 
     public HashSet<Accessories> accessories = new HashSet<>();
-
-    public Hairstyle hairstyle;
 
     public Character(int age, String gender, String description) {
         this.age = age;
@@ -55,22 +51,12 @@ public class Character {
         this.accessories = accessories;
     }
 
-    public Hairstyle getHairstyle() {
-        return hairstyle;
-    }
-
-    public void setHairstyle(Hairstyle hairstyle) {
-        this.hairstyle = hairstyle;
-    }
-
     @Override
     public String toString() {
         return "Character{" +
                 "age=" + age +
                 ", gender='" + gender + '\'' +
                 ", description='" + description + '\'' +
-                ", accessories=" + accessories +
-                ", hairstyle=" + hairstyle +
-                '}';
+                ", accessories=" + accessories + +'}';
     }
 }
