@@ -5,36 +5,21 @@ import com.miri_and_donghak.makefriend.entity.enums.Hairstyle;
 
 import java.util.ArrayList;
 
-public class Charcter {
-
-    private String name;
-
+public class Character {
     private int age;
 
     private String gender;
 
     private String description;
 
-    public ArrayList<Accessories> accessories;
+    public ArrayList<Accessories> accessories = new ArrayList<>();
 
     public Hairstyle hairstyle;
 
-    public Charcter(String name, int age, String gender, String description) {
-        this.name = name;
+    public Character(int age, String gender, String description) {
         this.age = age;
         this.gender = gender;
         this.description = description;
-    }
-
-    public Charcter(){}
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {
@@ -66,8 +51,7 @@ public class Charcter {
     }
 
     public void addAccessories(Accessories accessorie) {
-        if(accessories == null) accessories = new ArrayList<>();
-        this.accessories.add(accessorie);
+        accessories.add(accessorie);
     }
 
     public Hairstyle getHairstyle() {
@@ -76,5 +60,16 @@ public class Charcter {
 
     public void setHairstyle(Hairstyle hairstyle) {
         this.hairstyle = hairstyle;
+    }
+
+    @Override
+    public String toString() {
+        return "Character{" +
+                "age=" + age +
+                ", gender='" + gender + '\'' +
+                ", description='" + description + '\'' +
+                ", accessories=" + accessories +
+                ", hairstyle=" + hairstyle +
+                '}';
     }
 }

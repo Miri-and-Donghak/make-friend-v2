@@ -3,12 +3,18 @@ package com.miri_and_donghak.makefriend.custom;
 import com.miri_and_donghak.makefriend.component.lobby.Lobby;
 import com.miri_and_donghak.makefriend.component.makeFriend.MakeFriend;
 import com.miri_and_donghak.makefriend.component.showMyFriends.ShowMyFriends;
-import com.miri_and_donghak.makefriend.entity.Charcter;
+import com.miri_and_donghak.makefriend.entity.Character;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class FrameContainer {
     private final Lobby lobby;
     private final MakeFriend makeFriend;
     private final ShowMyFriends showMyFriends;
+
+    public HashMap<String ,Character> characters = new HashMap<>();
 
     public FrameContainer() {
         lobby = new Lobby(this);
@@ -34,17 +40,17 @@ public class FrameContainer {
         showMyFriends.setVisible(false);
     }
 
-    public void addCharcterOnMakeFriend(Charcter charcter) {
-        makeFriend.addCharcter(charcter);
-    }
-
-    public Charcter getCharcterOnMakeFriend() {
-        return makeFriend.getCharcter();
-    }
-
     public void onlyShowMyFriends() {
         showMyFriends.setVisible(true);
         makeFriend.setVisible(false);
         lobby.setVisible(false);
+    }
+
+    public void addCharacter(Character character, String name){
+        characters.put(name, character);
+    }
+
+    public Character findCharacterByName(String name){
+        return characters.get(name);
     }
 }

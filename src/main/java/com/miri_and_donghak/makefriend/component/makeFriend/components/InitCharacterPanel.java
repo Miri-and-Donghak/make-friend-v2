@@ -1,7 +1,7 @@
 package com.miri_and_donghak.makefriend.component.makeFriend.components;
 
 import com.miri_and_donghak.makefriend.custom.FrameContainer;
-import com.miri_and_donghak.makefriend.entity.Charcter;
+import com.miri_and_donghak.makefriend.entity.Character;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -39,15 +39,13 @@ public class InitCharacterPanel extends JPanel {
             String gender = genderField.getSelectedIndex() == 0 ? "male" : "female";
             String description = descriptionField.getText();
 
-            Charcter charcter = new Charcter();
-            charcter.setName(name);
-            charcter.setAge(age);
-            charcter.setGender(gender);
-            charcter.setDescription(description);
+            Character character = new Character(age, gender, description);
 
-            frameContainer.addCharcterOnMakeFriend(charcter);
-            System.out.println(frameContainer.getCharcterOnMakeFriend().getAge());
-            System.out.println(frameContainer.getCharcterOnMakeFriend().getAccessories().get(0));
+            frameContainer.addCharacter(character, name);
+
+            Character test = frameContainer.findCharacterByName(name);
+
+            System.out.println(test.toString());
         });
 
         JButton goLobby = new JButton("메인으로 돌아가기");

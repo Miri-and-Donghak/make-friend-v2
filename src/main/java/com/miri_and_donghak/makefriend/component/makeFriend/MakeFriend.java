@@ -4,7 +4,7 @@ import com.miri_and_donghak.makefriend.custom.FrameContainer;
 import com.miri_and_donghak.makefriend.component.makeFriend.components.AccessorieList;
 import com.miri_and_donghak.makefriend.component.makeFriend.components.InitCharacterPanel;
 import com.miri_and_donghak.makefriend.component.makeFriend.components.ShowCharacterStatus;
-import com.miri_and_donghak.makefriend.entity.Charcter;
+import com.miri_and_donghak.makefriend.entity.Character;
 import com.miri_and_donghak.makefriend.util.CursorUtil;
 
 import javax.swing.*;
@@ -16,7 +16,7 @@ public class MakeFriend extends JFrame{
     private static Dimension defaultButtonSize = new Dimension(250, 80);
     private static Dimension fullsize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    public ArrayList<Charcter> charcterList = new ArrayList<>();
+    public ArrayList<Character> characterList = new ArrayList<>();
     public MakeFriend(FrameContainer frameContainer) {
         this.frameContainer = frameContainer;
 
@@ -32,12 +32,12 @@ public class MakeFriend extends JFrame{
         setSize(fullsize);
     }
 
-    public void addCharcter(Charcter charcter){
-        if(charcterList == null) charcterList = new ArrayList<>();
-        charcterList.add(charcter);
+    public void addCharcter(Character character){
+        if(characterList == null) characterList = new ArrayList<>();
+        characterList.add(character);
     }
 
-    public Charcter getCharcter(){
-        return charcterList.get(0);
+    public Character getCharcter(){
+        return characterList.get(0);
     }
 }
